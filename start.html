@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NeoCity</title>
+    <script src="story.js">w</script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -132,7 +133,7 @@
                 }
             },
             acceptJob: {
-                text: '"I\'ve heard you hack into anything. I need you to hack into the city\'s mainframe and steal some data for me. I\'ll pay you 10,000 credits. It\'s nothing confidential, just some building plans. I\'ll get you access, I juest need your skills. Are you in?" 10,000 credits would pay your bills for a year or so, giving you time to find a better job.',
+                text: '"I\'ve heard you can hack into anything. I need you to hack into the city\'s mainframe and steal some data for me. I\'ll pay you 10,000 credits. It\'s nothing confidential, just some building plans. I\'ll even get you access, I just need your skills. Are you in?" 10,000 credits would pay your bills for a year or so, giving you time to find a better job.',
                 choices: {
                     Yes: "hack",
                     Nah: "walkAway"
@@ -447,7 +448,7 @@
                 text: 'You\'re (mostly) clean money should last you for a long time! Everything is going well, until someone starts poking into the code, and discovers you cheated! They can\'t prove it was you, but the comapnay Nine Ten Do! is part of the ruling corporations, so you need to be careful.',
                 choices: {
                     "Spend the money before it vanishes": "spree",
-                    "Treat it like a suprise, and hoard it": "care",
+                    "Treat it like a suprise, and hoard it": "hoard",
                 }
             },
             small: {
@@ -457,7 +458,23 @@
                     "Nah, I am rich enough": "rich",
                 }
             },
+            looky: {
+                text: 'The clues you\'re following are well hidden, usually a line of code here, a line there. Sometimes the missing information is just as telling as what is there. Do you want to be quick, getting in and out, or careful, and covering your tracks?',
+                choices: {
+                    "In and out Baby": "baby",
+                    "Carefully would be best": "care",
+                }
+            },
+            confess: {
+                text: 'You pick up your phone, and call the non-emergancy police number. After a few minutes, you are answered. "Hello this is the Police, how can we help you today?" You take a deep breath before speaking. "I have information on the attack that just occured. Who can I give this infomration to?" There was a noticable pause before the reply came. "The police will be there shortly to pick you up. Please do not resist them"',
+                choices: {
+                    "Run": "run",
+                    "Wait for them to arrive, and fight back": "die",
+                    "Wait for them to arrive, and give in": "jail",
+                }
+            },
         };
+
 
         let currentNode = storyNodes.start;
 
