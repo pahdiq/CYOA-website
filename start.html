@@ -424,7 +424,7 @@
             bluff: {
                 text: '"I asked first, and I need an answer!" You say. Instantly the cybrog\'s chest lit up, almost blinding you. "You are not authorized to be here." She says, "I am this building\'s securtiy. Now answer me, why are you here?" Her hand twitches, as if a second away from grabbing the blaster at her hip.',
                 choices: {
-                    "I am fixing this computer": "fix",
+                    "I am gathering files for someone": "gather",
                     "That is none of your business": "death",
                 }
             },
@@ -488,7 +488,43 @@
                     "Listen a little longer": "long"
                 }
             },
-            
+            t1: {
+                text: '"That\'s wierd," You say slowly, as if confused. "I was told to come in and fix the computer." The cyborg looks at you, her facial expression blank. Finally she speaks. "If you were here to fix the computer, why did you run?"',
+                choices: {
+                    "I thought that was the fire alarm": "t3",
+                    "I thought someone had broken in": "t4",
+                    "Instincts":"t5"
+                }
+            },
+            t2: {
+                text: '"Well I should be." You say forecfully. "Did your list not update you something?" The cyborg paused, looking puzzled. "The list has not been changed in over a year. And that was the last time I had a visitor. No one has even used that computer since then, What exactly are you fixing?" ',
+                choices: {
+                    "The mainframe crashed": "t6",
+                    "Reorganizing files": "t7",
+                    "Checking for viruses": "t8",
+                }
+            },
+            gather: {
+                text: '"I am gathering files for someone." You say, thinking quickly. "I was told to come in and get the files. I was given this," You hold up your lanyard. "And told to deliver some specific files."',
+                choices: {
+                    "Tell the truth": "caught",
+                    "lie": "fix",
+                }
+            },
+            death: {
+                text: '"That is none of your business." You say, trying to act confident. As the words leave your mouth however, you see a blinding flash of red light, and then nothing.',
+                choices: {
+                    "You Died": "start",
+                }
+            },
+            10: {
+                Image: "pics/stairs.jpg",
+                text: 'You go up a few floors, then sneak out into landing. Looking through, you see a crowded workspace. Luckily it looks like there are a few open computers you could get access to. Do you want to try here, or go up higher?',
+                choices: {
+                    "Try here": "try",
+                    "Go up higher": "1000",
+                }
+            },
         };
 
 
