@@ -378,7 +378,7 @@
             winner: {
                 text: 'As you expected, you get an email a couple days later, and you won! The money has been deposited in your account, and you\'re set for life! or at least for now. As you skim theough the email that was sent to you, you notice something odd, there seems to be a line at the very bottom in 1 point font, either that or it\'s just a line, you could be seeing things.',
                 choices: {
-                    "Screw that, I'm rich!": "rich",
+                    "Screw that, I am rich!": "rich",
                     "What does it say?": "small",
                 }
             },
@@ -433,7 +433,7 @@
                 text: 'You enter the front door, and walk past the receptionist robot. She looks at you, and her mouth glows like she\'s about to say something, but you just keep moving, and she looks away. Sweating a little, you head to the fire stairs, and start walking. You need to find a computer, as soon as possible.',
                 choices: {
                     "Go up a couple of floors": "10",
-                    "Go up a lot": "1000",
+                    "Go up a lot": "600",
                 }
             },
             key: {
@@ -522,7 +522,26 @@
                 text: 'You go up a few floors, then sneak out into landing. Looking through, you see a crowded workspace. Luckily it looks like there are a few open computers you could get access to. Do you want to try here, or go up higher?',
                 choices: {
                     "Try here": "try",
-                    "Go up higher": "1000",
+                    "Go up higher": "600",
+                }
+            },
+            600: {
+                Image: "pics/office.jpg",
+                text: 'The lower floors are for the grunts, they won\'t have access to anything important. You climb up for what feels like hours, at some point your legs stopped hurting, and just went numb. When you finally felt like you were high enough, you look at the door number. To your shock you are on the 600th floor! This should be high enough. You step into the hallway, and see one office directly to your left. It appears to be a lab techs office! You walk in, and get to work. Suddenly a voice speaks from your right. "Hello visitor. Will you help me?"',
+                choices: {
+                    "What the...": "ai",
+                }
+            },
+            spree: {
+                text: 'Use it or lose it Baby! You start spending your money recklessly, buying everything you could ever want. Within a month, You\'ve burned through almost all of your winnings, and no one even suspects a thing! Unfortunately, you\'ve also burned through all your money, and now you\'re broke again. You\'ll have to find a job soon.',
+                choices: {
+                    "Game Over": "start",
+                }
+            },
+            hoard: {
+                text: 'While they can\'t prove anything, It\'s best to prepare for the future. You store the momney in a local bank, and use it sparingly. Time passes, and with no evidence, the investigation comes to an end, unsolved. The rest of your life is spent in comfort, and you die peacefully in your sleep. Congratulations! You have found one of the good endings! Go ahead and try again, there is more to find! Thanks for playing!',
+                choices: {
+                    "You Win! Start again?": "start",
                 }
             },
         };
