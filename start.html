@@ -469,7 +469,7 @@
                 text: 'You pick up your phone, and call the non-emergancy police number. After a few minutes, you are answered. "Hello this is the Police, how can we help you today?" You take a deep breath before speaking. "I have information on the attack that just occured. Who can I give this infomration to?" There was a noticable pause before the reply came. "The police will be there shortly to pick you up. Please do not resist them"',
                 choices: {
                     "Run": "run",
-                    "Wait for them to arrive, and fight back": "die",
+                    "Wait for them to arrive, and fight back": "DBC",
                     "Wait for them to arrive, and give in": "jail",
                 }
             },
@@ -542,6 +542,29 @@
                 text: 'While they can\'t prove anything, It\'s best to prepare for the future. You store the momney in a local bank, and use it sparingly. Time passes, and with no evidence, the investigation comes to an end, unsolved. The rest of your life is spent in comfort, and you die peacefully in your sleep. Congratulations! You have found one of the good endings! Go ahead and try again, there is more to find! Thanks for playing!',
                 choices: {
                     "You Win! Start again?": "start",
+                }
+            },
+            baby: {
+                text: 'Their systm is practically begging for you to poke around! There\'s virtually no security! An hour after you started you have a list of things that were out of place. A little bit of sorting, and the mysteries of Nine Ten Do! are revealed. They were planning on cementing their position as the most powerful company in the world! They had spent the last few years designing a new type of cybernetic implant that would allow them to control their users! Of course they were marketing this new implant as "The future of gaming!" But once enough people had the implant, they could marshall their forces, and put themselves in charge of the world government! As you stared at your screen in shock, your door got kicked open, and a dozen men charged into your apartment, guns pointed at you. "Freeze!" They yelled. "Get on the ground!"',
+                choices: {
+                    "Obey": "obey",
+                    "Resist": "DCB",
+                }
+            },
+            care: {
+                text: 'They\'re lack of security is almost too obvious, so you proceed carefully, double checking everything. About five mminutes in, you discover a security feature that would have tagged your computer, then gone inactive, so they could track you down and you would never have know! Luckily you were careful, and an hour after you started you have a list of things that were out of place. A little bit of sorting, and the mysteries of Nine Ten Do! are revealed. They were planning on cementing their position as the most powerful company in the world! They had spent the last few years designing a new type of cybernetic implant that would allow them to control their users! Of course they were marketing this new implant as "The future of gaming!" But once enough people had the implant, they could marshall their forces, and put themselves in charge of the world government!',
+                choices: {
+                    "Report it to the cops": "cops",
+                    "Stop them from inside": "prevent",
+                    "Let them do it": "let",
+                    "blackmail them": "black",
+                }
+            },
+            DBC: {
+                Image: "pics/cops.jpg",
+                text: 'The cops really don\'t appreciate your attempts to hinder them, and despite your best efforts, you don\'t survive the struggle.',
+                choices: {
+                    "You died": "start",
                 }
             },
         };
