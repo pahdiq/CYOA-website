@@ -346,7 +346,7 @@
                 text: 'With your job accomplished, you head home, $10,000 richer. The cash should carry you through for a while. You open the door to your room and turn on the tv, before falling asleep on the couch. What feels like moments later, you wake up as the TV starts blaring, having raised it\'s own volume. We have just recieved a report that there has been a bombing in the slums! The area has been completely destroyed, and there are no survivors. The police are investigating, but they have no leads. It appears the terrorists were targeting a specific building. You sit there, stunned.',
                 choices: {
                     "Did you do that?": "uhoh",
-                    "hear more": "wait",
+                    "Hear more": "wait",
                 }
             },
             follow: {
@@ -364,7 +364,7 @@
             lie: {
                 text: '"Hello there." You say forcefully. "What are you doing here?" The cyborg freezes, clearly confused. "What am I doing?" She asks slowly. "What are you doing here? I am this buildings security." Sweat drips down your back as you respond.',
                 choices: {
-                    "I'm supposed to be here": "what",
+                    "I am supposed to be here": "what",
                     "I asked first, and I need an answer": "bluff",
                 }
             },
@@ -372,7 +372,7 @@
                 text: 'You look up at the building, and roll your shoulders. The Code Breakers are super elite, so it makes sense they would give you a task like this. This should be fun! how do you want to tackle this problem?',
                 choices: {
                     "Act like I belong": "act",
-                    "sneakiness is key": "key",
+                    "Sneakiness is key": "key",
                 }
             },
             winner: {
@@ -417,7 +417,7 @@
             what: {
                 text: '"I\'m supposed to be here" you bluff "I\'m here to fix the computer." The cyborg looks at you, and then at the computer. "You\'re not on the list." She says, and you feel your heart drop.',
                 choices: {
-                    "That's wierd...": "t1",
+                    "That is wierd...": "t1",
                     "Well I should be": "t2",
                 }
             },
@@ -565,6 +565,20 @@
                 text: 'The cops really don\'t appreciate your attempts to hinder them, and despite your best efforts, you don\'t survive the struggle.',
                 choices: {
                     "You died": "start",
+                }
+            },
+            Run: {
+                text: 'No way are you going to wait for the cops to show up, something about the womans voice made you nervous. You quickly pack your bags, and get out of the apartment. You get to the hallway, and are waiting for the elevator, when you see two cops walking towards you. They are looking around them. They walk by you, and you keep your head down. The last thing you see before entering the elevator is the cops pounding on your door.',
+                choices: {
+                    "Run to the slums": "slums",
+                    "Start a new life in the Neon city": "new",
+                }
+            },
+            look: {
+                text: 'You open up the files, and are suprised to see that these ones are more heavily encrypted. It takes several minutes just to acess the files themselves. To your surprise, it looks like these files aren\'t about water filtration at all! It appears that these are plans for a virus of some sort. You aren\'t a biologist, but it according to this data it\'s some sort of virus that would affect minds and computers! You quickly copy the files for later study.',
+                choices: {
+                    "Give the files to the man": "man2",
+                    "Ask about the hidden files": "Collab"
                 }
             },
         };
