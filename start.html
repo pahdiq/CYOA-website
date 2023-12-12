@@ -581,7 +581,21 @@
                 text: 'You open up the files, and are suprised to see that these ones are more heavily encrypted. It takes several minutes just to acess the files themselves. To your surprise, it looks like these files aren\'t about water filtration at all! It appears that these are plans for a virus of some sort. You aren\'t a biologist, but it according to this data it\'s some sort of virus that would affect minds and computers! You quickly copy the files for later study.',
                 choices: {
                     "Give the files to the man": "man2",
-                    "Ask about the hidden files": "Collab"
+                    "Ask about the hidden files": "collab"
+                }
+            },
+            man2: {
+                text: 'You hand the man the files. He looks at it, and smiles. "Thank you." He says, and taps a couple buttons. "Your money will arrive shortly." He says, and walks away. ',
+                choices: {
+                    "Time to look into these files": "files",
+                    "Follow him": "follow",
+                }
+            },
+            files: {
+                text: 'You head back to your apartment, and start looking into wht you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG would have complete control over the world! You need to stop this!',
+                choices: {
+                    "Call the police": "corrupt",
+                    "Look into the details": "doctor",
                 }
             },
         };
