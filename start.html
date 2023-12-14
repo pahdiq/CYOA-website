@@ -592,10 +592,39 @@
                 }
             },
             files: {
-                text: 'You head back to your apartment, and start looking into wht you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG would have complete control over the world! You need to stop this!',
+                text: 'You head back to your apartment, and start looking into wht you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including kill anyone who got in their way! You need to stop this!',
                 choices: {
                     "Call the police": "corrupt",
                     "Look into the details": "doctor",
+                }
+            },
+            corrupt: {
+                text: 'You call the local police station, and start calling the police. You are answered by a robot, who asks "What is the nature of your emergancy?" You hesitate, how to explain the situation without getting in trouble? Techincally this was in fact stolen data. "I was given access to some important information." You say, speaking slowly. "And I have evidence that the IPCG is planning on creating a pandemic." The robot hesitated for the briefest of seconds before responding. "Thank you for this report. The police are on their way to escort you into custody."',
+                choices: {
+                    "Surrender": "corrupt2",
+                    "Resist the cops": "DBC",
+                }
+            },
+            corrupt2: {
+                Image: "pics/copa.jpg",
+                text: 'The police arrive, and you submit to their rather rough process of searching you for weapons. "Is that the tablet with the data? one of the police asks you?" You nod, and the officer picks it up. He turns it on, verifies it has the data, the asks "Do you have a backup of this information?" "No." You reply. I called you guys the moment I realized what I had." The officer nodded, looked at the tablet one more time, then smashed against the ground. "You are under arrest for theft of government property." He says. Something is injected into your neck, and the world fades to black.',
+                choices: {
+                    "Wake up": "jailcell",
+                }
+            },
+            jailcell: {
+                Image: "pics/jailcell.jpg",
+                text: 'When you finally wake up, you are locked inside of a jail cell, all alone. Looking out the large window, you can see you are very high up, and it looks like it\'s close to dawn. You must\'ve been asleep for hours. You wait around, unable to do more than pace your small cell. Finally around noon a bowl of what looks like mud is slid under the door. It smells awful, but you gulp down what you can. The moment you finish eating, a slot opens for the bowl. Several more hours pass, and nothing changes.',
+                choices: {
+                    "Just keep waiting": "lawyer",
+                }
+            },
+            lawyer: {
+                Image: "pics/lawyer.jpg",
+                text: 'Late that night a someone knocks on your door, and it opens slowly. A cyborg steps in, dressed in a nice suit. "I am your lawyer." He says in a very clipped and proffesional tone. "I am here to help you." You look at him, and ask "What\'s going on?" He looks at you, or almost through you, and says "You are being charged with theft of government property, and treason. You are looking at a minimum of 20 years in prison." You stare at him, and he continues. "I have been hired to get you out of this mess. I am here to discuss your options." ',
+                choices: {
+                    "Tell him everything": "confess2",
+                    "Let him speak": "lawyer2",
                 }
             },
         };
