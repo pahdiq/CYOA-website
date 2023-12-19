@@ -592,7 +592,7 @@
                 }
             },
             files: {
-                text: 'You head back to your apartment, and start looking into wht you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including kill anyone who got in their way! You need to stop this!',
+                text: 'You head back to your apartment, and start looking into what you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including kill anyone who got in their way! You need to stop this!',
                 choices: {
                     "Call the police": "corrupt",
                     "Look into the details": "doctor",
@@ -625,6 +625,27 @@
                 choices: {
                     "Tell him everything": "confess2",
                     "Let him speak": "lawyer2",
+                }
+            },
+            obey: {
+                Image: "pics/cops2.jpg",
+                text: 'You immediatley comply with the police officers, and they handcuff you. A few seconds later you are dragged out of your apartment, and thrown into a waiting police car. They drag you to the police station, and you\'re thrown in. ',
+                choices: {
+                    "Look around": "jail2",
+                }
+            },
+            jail2: {
+                Image: "pics/jailcell.jpg",
+                text: 'When you finally wake up, you are locked inside of a jail cell, all alone. Looking out the large window, you can see you are very high up, and it looks like it\'s close to dawn. You must\'ve been asleep for hours. You wait around, unable to do more than pace your small cell. Finally around noon a bowl of what looks like mud is slid under the door. It smells awful, but you gulp down what you can. The moment you finish eating, a slot opens for the bowl. You put it in, and the slot vanishes. Several more hours pass, and nothing changes.',
+                choices: {
+                    "Keep waiting": "lawyer3",
+                }
+            },
+            lawyer3: {
+                Image: "pics/lawyer.jpeg",
+                text: 'The door opens the next morning, and a cyborg walks in. "Hello." He says in an unusually tobotic voice. "I am your lawyer. I am here to help you." You look at him, and ask "What\'s going on?" He looks at you, or almost through you, and says "You are being charged with unethical hacking, invasion of privacy, government espionage, and treason. You are looking at a minimum of 50 years in prison." You stare at him in shock, and he continues. "I have been hired to be your defence. I am here to discuss your options." ',
+                choices: {
+                    "Let him speak": "lawyer4",
                 }
             },
         };
