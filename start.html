@@ -648,6 +648,32 @@
                     "Let him speak": "lawyer4",
                 }
             },
+            lawyer4: {
+                text: 'I nodded, and waited for him to continue. "You don\'t have many choices. There is plenty of evidence, and the police caught you red-handed inside of Nine Ten Do!\'s systems. You can plead guilty, and hope for a lighter sentence, or you can plead not guilty, and hope for a miracle. I would recommend pleading guilty, and hoping for a lighter sentence."',
+                choices: {
+                    "Plead guilty": "guilt",
+                    "Plead not guilty": "nonguilt",
+                }
+            },
+            nonguilt: {
+                text: '"I\'ll plead not guilty." The lawyer shakes his head. "Ok..." He says. "I\'ll see what I can do." He walks out of the room. As you walked around the cell, you wonder what would happen. Supposedly there used to be laws about criminals in courts, but you doubted you would be given such luxuries. Hours passed, and the door opened again. The lawyer walked in, looked at you, the said, "You\'ve been sentanced to 50 years of jail time, with no possibility of parole." He turned around, and walked out of the room.',
+                choices: {
+                    "50 years is a long time...": "end",
+                }
+            },
+            end: {
+                text: 'The lawyer leaves the room, and the door shuts. You sit there, stunned. 50 years? No chance of parole? What could I do...? Nothing. You couldn\'t do anything. This was the end.',
+                choices: {
+                    "Start over": "start",
+                }
+            },
+            guilt: {
+                text: '"I\'d like to plead guilty, and I want a plea deal." The lawyer nodded. "I think that is your best choice." He walks out of the room. After the door closed, You passed, unable to sit still. Hours passsed, and finally the door opens. You look up, expecting to see the lawyer. To your suprise, you see someone else walk in, someone wearing a Nine Ten Do! uniform. "Hello." He says, and sits down. "I am here to offer you a deal."',
+                choices: {
+                    "No thanks": "non",
+                    "What is this deal": "deal",
+                }
+            },
         };
 
 
