@@ -561,7 +561,7 @@
                     "Report it to the cops": "cops",
                     "Stop them from inside": "prevent",
                     "Let them do it": "let",
-                    "blackmail them": "black",
+                    "Blackmail them": "black",
                 }
             },
             DBC: {
@@ -676,9 +676,32 @@
                 }
             },
             non: {
-                text: 'The man looked suprised at your quick response. "Aren\'t you interested in the deal?" You shake your head, and the man sits there. Clearly he wasn\'t expecting that. "Well then I hope you enjoy your time in prison." The man left. A few hours later, the lawyer came back, and told you that you had been sentanced to 50 years in prison, with no chance of parole.',
+                text: 'The man looked suprised at your response. "Aren\'t you interested in the deal?" You shake your head, and the man sits there. Clearly he wasn\'t expecting that. "Well then I hope you enjoy your time in prison." The man left. A few hours later, the lawyer came back, and told you that you had been sentanced to 50 years in prison, with no chance of parole. Your life was effectivly over, if you survived the brutal prison system.',
                 choices: {
                     "50 years!?": "end",
+                }
+            },
+            deal: {
+                text: '"What is this deal?" You ask suspiciously. "The kind you can\'t refuse." Tha man said, a slight smile on his face. "We will tell the courts that you were working within our system in order to test our defences, and that the security alert sent out to the police was a false signal." Your mouth drops open as the man spoke. "What..." You clear your throat before continuing. "What do you want in exchange?" The man\'s smirk grows into a predatiry grin. "We want your help... testing... the defences of our rivals." The man leans closer, and drops his voice so low you can barely hear him. "If you know what I mean. We will protect you, mostly..." His voice trailed off and he leaned back. "So. What do you say?"',
+                choices: {
+                    "Sure": "devil",
+                    "No.": "non",
+                }
+            },
+            devil: {
+                Image: "pics/corrupt.png",
+                text: 'The man look happy at your response, clearly he had wanted that answer. "Excellent. Your lawyer will return shortly, and tell you that a miracle has occured, and you\'ve been found not guilty. After being given your items, you will leave the jail. A car will be waiting for you to take you to your new apartment. Someone will be there to instruct you further." As suddenly as the man arrived, he left, no pausing to answer and of your half-formed questions.',
+                choices: {
+                    "Wait and see": "freedo",
+                }
+            },
+            freedo: {
+                Image: "pics/car.jpg",
+                text: 'The events unfolded just as the man said the would. As you leave the jail, you see the car the man talked about. What do you do?',
+                audio: "audio/door.mp3",
+                choices: {
+                    "Run for it": "run2",
+                    "Get in the car": "in",
                 }
             },
         };
@@ -694,6 +717,15 @@
     if (currentNode.Image) {
         // Display the image
         storyContainer.innerHTML += `<img src="${currentNode.Image}" alt="Scene Image" style="max-width: 50%;">`;
+    }
+
+    if (currentNode.audio) {
+        // Create an audio element
+        const audioElement = document.createElement("audio");
+        audioElement.src = currentNode.audio;
+        audioElement.autoplay = true;
+        audioElement.controls = false;
+        storyContainer.appendChild(audioElement);
     }
 
     // Display choices
