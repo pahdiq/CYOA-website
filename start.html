@@ -280,7 +280,7 @@
                 }
             },
             q2: {
-                audio: 'audio/game.wav',
+                audio: 'audio/game2.mp3',
                 text: 'Which of the following is NOT an area in Breath of the Wild\'s Hyrule?',
                 choices: {
                     "Gorko Lake": "fail",
@@ -290,7 +290,7 @@
                 }
             },
             q3: {
-                audio: 'audio/game.wav',
+                audio: 'audio/game2.mp3',
                 text: 'What is the name of the king of Hyrule?',
                 choices: {
                     "King Rhoam": "q4",
@@ -300,6 +300,7 @@
                 }
             },
             q4: {
+                audio: 'audio/game2.mp3',
                 text: 'Four Great Fairies live in the land of Hyrule. They\'re called Cotera, Kaysa, Mija and...',
                 choices: {
                     "Kay": "fail",
@@ -309,7 +310,7 @@
                 }
             },
             q5: {
-                audio: 'audio/game.wav',
+                audio: 'audio/game2.mp3',
                 text: 'What if Zelda was a girl?',
                 choices: {
                     "She would be awesome": "fail",
@@ -434,7 +435,7 @@
                 text: 'You\'re already in the system, so you might as well have some fun! You cruise through their systems, unstoppable. At first it was all fun and games, looking at their confidential files, looking into their new games, consoles, and even reading some emails. As you read however, you start to notice somethings that don\'t quite add up... Nine Ten Do! is hiding something!',
                 choices: {
                     "Look further": "looky",
-                    "I'm out, I'll be rich anyway": "winner",
+                    "I am out, I will be rich anyway": "winner",
                 }
             },
             uhoh: {
@@ -814,6 +815,7 @@
         audioElement.src = currentNode.audio;
         audioElement.autoplay = true;
         audioElement.controls = false;
+        audioElement.volume = 0.1; // Set the volume to 10%
         storyContainer.appendChild(audioElement);
     }
     // Display choices
