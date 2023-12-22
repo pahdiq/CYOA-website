@@ -24,6 +24,9 @@
         p {
             text-align: center;
             margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
         }
 
         nav {
@@ -53,10 +56,11 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            
         }
 
         button:hover {
-            background-color: #ff4040;
+            background-color: #1e24e6;
             color: #ffffff;
         }
 
@@ -378,31 +382,9 @@
                 choices: {
                     "Game over": "start",
                 }
-            },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+            },            
             home: {
+                audio: "audio/theme.wav",
                 text: 'With your job accomplished, you head home, $10,000 richer. The cash should carry you through for a while. You open the door to your room and turn on the tv, before falling asleep on the couch. What feels like moments later, you wake up as the TV starts blaring, having raised it\'s own volume. We have just recieved a report that there has been a bombing in the slums! The area has been completely destroyed, and there are no survivors. The police are investigating, but they have no leads. It appears the terrorists were targeting a specific building. You sit there, stunned.',
                 choices: {
                     "Did you do that?": "uhoh",
@@ -410,18 +392,21 @@
                 }
             },
             follow: {
+                audio: "audio/danger.wav",
                 text: 'You follow the man, after letting him get a small headstart. To your suprise, he seems to be headed for the slums... You follow him for hours, down elevators, accross roads, even through an old movie theatre. Just when your about to give up he turns into a house. After waiting a moment, you sneak up to the door.',
                 choices: {
                     "Listening": "hear",
                 }
             },
             door: {
+                audio: "audio/danger.wav",
                 text: 'The cyborg laughs at your futile attempts. Nice try, but that door is sealed. And so is your fate. The last thing you feel is a laser from the cyborg\'s chest...',
                 choices: {
                     "Game over": "start",
                 }
             },
             lie: {
+                audio: "audio/mission.wav",
                 text: '"Hello there." You say forcefully. "What are you doing here?" The cyborg freezes, clearly confused. "What am I doing?" She asks slowly. "What are you doing here? I am this buildings security." Sweat drips down your back as you respond.',
                 choices: {
                     "I am supposed to be here": "what",
@@ -429,6 +414,7 @@
                 }
             },
             walzin: {
+                audio: "audio/mission.wav",
                 text: 'You look up at the building, and roll your shoulders. The Code Breakers are super elite, so it makes sense they would give you a task like this. This should be fun! how do you want to tackle this problem?',
                 choices: {
                     "Act like I belong": "act",
@@ -436,6 +422,7 @@
                 }
             },
             winner: {
+                audio: "audio/mission.wav",
                 text: 'As you expected, you get an email a couple days later, and you won! The money has been deposited in your account, and you\'re set for life! or at least for now. As you skim theough the email that was sent to you, you notice something odd, there seems to be a line at the very bottom in 1 point font, either that or it\'s just a line, you could be seeing things.',
                 choices: {
                     "Screw that, I am rich!": "rich",
@@ -443,6 +430,7 @@
                 }
             },
             poke: {
+                audio: "audio/mission.wav",
                 text: 'You\'re already in the system, so you might as well have some fun! You cruise through their systems, unstoppable. At first it was all fun and games, looking at their confidential files, looking into their new games, consoles, and even reading some emails. As you read however, you start to notice somethings that don\'t quite add up... Nine Ten Do! is hiding something!',
                 choices: {
                     "Look further": "looky",
@@ -450,6 +438,7 @@
                 }
             },
             uhoh: {
+                audio: "audio/danger.wav",
                 text: 'You watch on the news as they show giant crater, clearly the terrorists had wanted it gone. And that area did look vaugley familiar from your hack... Panicking a little now, you pull out the copy of files you took for yourself, and compare it to the pictures on the tv. Yup, you were right, you had given the plans of the buildings there to the terrorists.',
                 choices: {
                     "Turn youself in": "confess",
@@ -457,24 +446,28 @@
                 }
             },
             wait: {
+                audio: "audio/danger.wav",
                 text: 'You sit in silence, staring at the screen. The reporter talks for a few more minutes before saying "It appears someone hacked into the cities database, but there isn\'t any evidence to suggest who. The police are investigating, and we wil keep you updated on this case as it develops." The TV turned itself down again, as it was just repeating itself.',
                 choices: {
                     "Did I do this?": "uhoh",
                 }
             },
             hear: {
+                audio: "audio/danger.wav",
                 text: 'As you move closer, you the voices inside become louder, but it wasn\'t a voice you recognized. "-eak in through this vent, and get access to the vault here. We need to be in and out in five minutes or less. Any questions?" The same man who hired you to steal the plans spoke up. "This isn\'t our normal job, what are we going after?" There was chuckle from the first man "We\'re after information. My sources tell me that something is in there. This isn\'t our normal smash and grab, we need to be careful. We are going in for information, therefore we don\'t need to actually take anything."',
                 choices: {
                     "What the...": "steal",
                 }
             },
             goHome3: {
+                audio: "audio/mission.wav",
                 text: 'There\'s too much risk involved, and you don\'t want to get caught. You head home, and try to forget about the whole thing. After all, you\'ve still got the game to win! You pull up the website, and it doesn\'t take long to find the forum. Apperantly you have to answer some questions about some old video games, and you\'ll be entered into a prize pool.',
                 choices: {
                     "I got this": "play",
                 }
             },
             what: {
+                audio: "audio/mission.wav",
                 text: '"I\'m supposed to be here" you bluff "I\'m here to fix the computer." The cyborg looks at you, and then at the computer. "You\'re not on the list." She says, and you feel your heart drop.',
                 choices: {
                     "That is wierd...": "t1",
@@ -482,6 +475,7 @@
                 }
             },
             bluff: {
+                audio: "audio/mission.wav",
                 text: '"I asked first, and I need an answer!" You say. Instantly the cybrog\'s chest lit up, almost blinding you. "You are not authorized to be here." She says, "I am this building\'s securtiy. Now answer me, why are you here?" Her hand twitches, as if a second away from grabbing the blaster at her hip.',
                 choices: {
                     "I am gathering files for someone": "gather",
@@ -489,6 +483,7 @@
                 }
             },
             act: {
+                audio: "audio/mission.wav",
                 Image:"pics/bot.jpg",
                 text: 'You enter the front door, and walk past the receptionist robot. She looks at you, and her mouth glows like she\'s about to say something, but you just keep moving, and she looks away. Sweating a little, you head to the fire stairs, and start walking. You need to find a computer, as soon as possible.',
                 choices: {
@@ -497,6 +492,7 @@
                 }
             },
             key: {
+                audio: "audio/mission.wav",
                 Image: "pics/lobby.jpg",
                 text: 'You enter the building, just as a big group of people go through the front door. You join the back of the group, and move along with them, pretending to belong. The lobby is massive, and you can see dozens of people walking around.',
                 choices: {
@@ -505,6 +501,7 @@
                 }
             },
             rich: {
+                audio: "audio/theme.wav",
                 text: 'You\'re (mostly) clean money should last you for a long time! Everything is going well, until someone starts poking into the code, and discovers you cheated! They can\'t prove it was you, but the comapnay Nine Ten Do! is part of the ruling corporations, so you need to be careful.',
                 choices: {
                     "Spend the money before it vanishes": "spree",
@@ -512,6 +509,7 @@
                 }
             },
             small: {
+                audio: "audio/mission.wav",
                 text: 'It takes a couple seconds to manipulate the email, but eventually you get the 1 point font to something readable. It says "You have been selected to participate in a special competition. You will be given a series of tasks, and if you complete them, you will be given a prize. If you fail, you will be eliminated. If you don\'t respond, you will have opted out. Good luck."',
                 choices: {
                     "Reply to the email": "reply",
@@ -519,6 +517,7 @@
                 }
             },
             looky: {
+                audio: "audio/mission.wav",
                 text: 'The clues you\'re following are well hidden, usually a line of code here, a line there. Sometimes the missing information is just as telling as what is there. Do you want to be quick, getting in and out, or careful, and covering your tracks?',
                 choices: {
                     "In and out Baby": "baby",
@@ -526,6 +525,7 @@
                 }
             },
             confess: {
+                audio: "audio/danger.wav",
                 text: 'You pick up your phone, and call the non-emergancy police number. After a few minutes, you are answered. "Hello this is the Police, how can we help you today?" You take a deep breath before speaking. "I have information on the attack that just occured. Who can I give this infomration to?" There was a noticable pause before the reply came. "The police will be there shortly to pick you up. Please do not resist them"',
                 choices: {
                     "Run": "run",
@@ -534,6 +534,7 @@
                 }
             },
             hidden: {
+                audio: "audio/mission.wav",
                 text: 'No, you can\'t have them tracking you down. Luckily you were carfeful when hacking into the system, and you left no trace. There should be no way for them to track you down. What\'s the plan now?',
                 choices: {
                     "Go under cover": "run",
@@ -541,6 +542,7 @@
                 }
             },
             steal: {
+                audio: "audio/mission.wav",
                 text: 'These men, they are planning on using the plans in order to get infomration about something illegal! You get a bad feeling. Clearly these men are up to no good. Where those 10,000 credits worth your soul?',
                 choices: {
                     "Interupt their conversation": "int",
@@ -549,6 +551,7 @@
                 }
             },
             t1: {
+                audio: "audio/danger.wav",
                 text: '"That\'s wierd," You say slowly, as if confused. "I was told to come in and fix the computer." The cyborg looks at you, her facial expression blank. Finally she speaks. "If you were here to fix the computer, why did you run?"',
                 choices: {
                     "I thought that was the fire alarm": "t3",
@@ -557,6 +560,7 @@
                 }
             },
             t2: {
+                audio: "audio/danger.wav",
                 text: '"Well I should be." You say forecfully. "Did your list not update you something?" The cyborg paused, looking puzzled. "The list has not been changed in over a year. And that was the last time I had a visitor. No one has even used that computer since then, What exactly are you fixing?" ',
                 choices: {
                     "The mainframe crashed": "t6",
@@ -565,6 +569,7 @@
                 }
             },
             gather: {
+                audio: "audio/danger.wav",
                 text: '"I am gathering files for someone." You say, thinking quickly. "I was told to come in and get the files. I was given this," You hold up your lanyard. "And told to deliver some specific files."',
                 choices: {
                     "Tell the truth": "caught",
@@ -572,12 +577,14 @@
                 }
             },
             death: {
+                audio: "audio/fail.wav",
                 text: '"That is none of your business." You say, trying to act confident. As the words leave your mouth however, you see a blinding flash of red light, and then nothing.',
                 choices: {
                     "You Died": "start",
                 }
             },
             10: {
+                audio: "audio/mission.wav",
                 Image: "pics/stairs.jpg",
                 text: 'You go up a few floors, then sneak out into landing. Looking through, you see a crowded workspace. Luckily it looks like there are a few open computers you could get access to. Do you want to try here, or go up higher?',
                 choices: {
@@ -586,6 +593,7 @@
                 }
             },
             600: {
+                audio: "audio/mission.wav",
                 Image: "pics/office.jpg",
                 text: 'The lower floors are for the grunts, they won\'t have access to anything important. You climb up for what feels like hours, at some point your legs stopped hurting, and just went numb. When you finally felt like you were high enough, you look at the door number. To your shock you are on the 600th floor! This should be high enough. You step into the hallway, and see one office directly to your left. It appears to be a lab techs office! You walk in, and get to work. Suddenly a voice speaks from your right. "Hello visitor. Will you help me?"',
                 choices: {
@@ -593,18 +601,21 @@
                 }
             },
             spree: {
+                audio: "audio/fail.wav",
                 text: 'Use it or lose it Baby! You start spending your money recklessly, buying everything you could ever want. Within a month, You\'ve burned through almost all of your winnings, and no one even suspects a thing! Unfortunately, you\'ve also burned through all your money, and now you\'re broke again. You\'ll have to find a job soon.',
                 choices: {
                     "Game Over": "start",
                 }
             },
             hoard: {
+                audio: "audio/back.wav",
                 text: 'While they can\'t prove anything, It\'s best to prepare for the future. You store the momney in a local bank, and use it sparingly. Time passes, and with no evidence, the investigation comes to an end, unsolved. The rest of your life is spent in comfort, and you die peacefully in your sleep. Congratulations! You have found one of the good endings! Go ahead and try again, there is more to find! Thanks for playing!',
                 choices: {
                     "You Win! Start again?": "start",
                 }
             },
             baby: {
+                audio: "audio/mission.wav",
                 text: 'Their systm is practically begging for you to poke around! There\'s virtually no security! An hour after you started you have a list of things that were out of place. A little bit of sorting, and the mysteries of Nine Ten Do! are revealed. They were planning on cementing their position as the most powerful company in the world! They had spent the last few years designing a new type of cybernetic implant that would allow them to control their users! Of course they were marketing this new implant as "The future of gaming!" But once enough people had the implant, they could marshall their forces, and put themselves in charge of the world government! As you stared at your screen in shock, your door got kicked open, and a dozen men charged into your apartment, guns pointed at you. "Freeze!" They yelled. "Get on the ground!"',
                 choices: {
                     "Obey": "obey",
@@ -612,6 +623,7 @@
                 }
             },
             care: {
+                audio: "audio/mission.wav",
                 text: 'They\'re lack of security is almost too obvious, so you proceed carefully, double checking everything. About five mminutes in, you discover a security feature that would have tagged your computer, then gone inactive, so they could track you down and you would never have know! Luckily you were careful, and an hour after you started you have a list of things that were out of place. A little bit of sorting, and the mysteries of Nine Ten Do! are revealed. They were planning on cementing their position as the most powerful company in the world! They had spent the last few years designing a new type of cybernetic implant that would allow them to control their users! Of course they were marketing this new implant as "The future of gaming!" But once enough people had the implant, they could marshall their forces, and put themselves in charge of the world government!',
                 choices: {
                     "Report it to the cops": "cops",
@@ -621,6 +633,7 @@
                 }
             },
             DBC: {
+                audio: "audio/fail.wav",
                 Image: "pics/cops.jpg",
                 text: 'The cops really don\'t appreciate your attempts to hinder them, and despite your best efforts, you don\'t survive the struggle.',
                 choices: {
@@ -628,6 +641,7 @@
                 }
             },
             Run: {
+                audio: "audio/mission.wav",
                 text: 'No way are you going to wait for the cops to show up, something about the womans voice made you nervous. You quickly pack your bags, and get out of the apartment. You get to the hallway, and are waiting for the elevator, when you see two cops walking towards you. They are looking around them. They walk by you, and you keep your head down. The last thing you see before entering the elevator is the cops pounding on your door.',
                 choices: {
                     "Run to the slums": "slums",
@@ -635,6 +649,7 @@
                 }
             },
             look: {
+                audio: "audio/game.wav",
                 text: 'You open up the files, and are suprised to see that these ones are more heavily encrypted. It takes several minutes just to acess the files themselves. To your surprise, it looks like these files aren\'t about water filtration at all! It appears that these are plans for a virus of some sort. You aren\'t a biologist, but it according to this data it\'s some sort of virus that would affect minds and computers! You quickly copy the files for later study.',
                 choices: {
                     "Give the files to the man": "man2",
@@ -642,6 +657,7 @@
                 }
             },
             man2: {
+                audio: "audio/mission.wav",
                 text: 'You hand the man the files. He looks at it, and smiles. "Thank you." He says, and taps a couple buttons. "Your money will arrive shortly." He says, and walks away. ',
                 choices: {
                     "Time to look into these files": "files",
@@ -649,6 +665,7 @@
                 }
             },
             files: {
+                audio: "audio/theme.wav",
                 text: 'You head back to your apartment, and start looking into what you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including kill anyone who got in their way! You need to stop this!',
                 choices: {
                     "Call the police": "corrupt",
@@ -656,13 +673,15 @@
                 }
             },
             corrupt: {
-                text: 'You call the local police station, and start calling the police. You are answered by a robot, who asks "What is the nature of your emergancy?" You hesitate, how to explain the situation without getting in trouble? Techincally this was in fact stolen data. "I was given access to some important information." You say, speaking slowly. "And I have evidence that the IPCG is planning on creating a pandemic." The robot hesitated for the briefest of seconds before responding. "Thank you for this report. The police are on their way to escort you into custody."',
+                audio: "audio/theme.wav",
+                text: 'You call the local police station, and start wait fo them to answer. You are answered by a robot, who asks "What is the nature of your emergancy?" You hesitate, how to explain the situation without getting in trouble? Techincally this was in fact stolen data. "I was given access to some important information." You say, speaking slowly. "And I have evidence that the IPCG is planning on creating a pandemic." The robot hesitated for the briefest of seconds before responding. "Thank you for this report. The police are on their way to escort you into custody."',
                 choices: {
                     "Surrender": "corrupt2",
                     "Resist the cops": "DBC",
                 }
             },
             corrupt2: {
+                audio: "audio/mission.wav",
                 Image: "pics/copa.jpg",
                 text: 'The police arrive, and you submit to their rather rough process of searching you for weapons. "Is that the tablet with the data? one of the police asks you?" You nod, and the officer picks it up. He turns it on, verifies it has the data, the asks "Do you have a backup of this information?" "No." You reply. I called you guys the moment I realized what I had." The officer nodded, looked at the tablet one more time, then smashed against the ground. "You are under arrest for theft of government property." He says. Something is injected into your neck, and the world fades to black.',
                 choices: {
@@ -670,6 +689,7 @@
                 }
             },
             jailcell: {
+                audio: "audio/mission.wav",
                 Image: "pics/jailcell.jpg",
                 text: 'When you finally wake up, you are locked inside of a jail cell, all alone. Looking out the large window, you can see you are very high up, and it looks like it\'s close to dawn. You must\'ve been asleep for hours. You wait around, unable to do more than pace your small cell. Finally around noon a bowl of what looks like mud is slid under the door. It smells awful, but you gulp down what you can. The moment you finish eating, a slot opens for the bowl. Several more hours pass, and nothing changes.',
                 choices: {
@@ -677,6 +697,7 @@
                 }
             },
             lawyer: {
+                audio: "audio/mission.wav",
                 Image: "pics/lawyer.jpeg",
                 text: 'Late that night a someone knocks on your door, and it opens slowly. A cyborg steps in, dressed in a nice suit. "I am your lawyer." He says in a very clipped and proffesional tone. "I am here to help you." You look at him, and ask "What\'s going on?" He looks at you, or almost through you, and says "You are being charged with theft of government property, and treason. You are looking at a minimum of 20 years in prison." You stare at him, and he continues. "I have been hired to get you out of this mess. I am here to discuss your options." ',
                 choices: {
@@ -685,6 +706,7 @@
                 }
             },
             obey: {
+                audio: "audio/mission.wav",
                 Image: "pics/cops2.jpg",
                 text: 'You immediatley comply with the police officers, and they handcuff you. A few seconds later you are dragged out of your apartment, and thrown into a waiting police car. They drag you to the police station, and you\'re thrown in. ',
                 choices: {
@@ -692,6 +714,7 @@
                 }
             },
             jail2: {
+                audio: "audio/mission.wav",
                 Image: "pics/jailcell.jpg",
                 text: 'When you finally wake up, you are locked inside of a jail cell, all alone. Looking out the large window, you can see you are very high up, and it looks like it\'s close to dawn. You must\'ve been asleep for hours. You wait around, unable to do more than pace your small cell. Finally around noon a bowl of what looks like mud is slid under the door. It smells awful, but you gulp down what you can. The moment you finish eating, a slot opens for the bowl. You put it in, and the slot vanishes. Several more hours pass, and nothing changes.',
                 choices: {
@@ -699,6 +722,7 @@
                 }
             },
             lawyer3: {
+                audio: "audio/mission.wav",
                 Image: "pics/lawyer.jpeg",
                 text: 'The door opens the next morning, and a cyborg walks in. "Hello." He says in an unusually tobotic voice. "I am your lawyer. I am here to help you." You look at him, and ask "What\'s going on?" He looks at you, or almost through you, and says "You are being charged with unethical hacking, invasion of privacy, government espionage, and treason. You are looking at a minimum of 50 years in prison." You stare at him in shock, and he continues. "I have been hired to be your defence. I am here to discuss your options." ',
                 choices: {
@@ -706,6 +730,7 @@
                 }
             },
             lawyer4: {
+                audio: "audio/mission.wav",
                 text: 'I nodded, and waited for him to continue. "You don\'t have many choices. There is plenty of evidence, and the police caught you red-handed inside of Nine Ten Do!\'s systems. You can plead guilty, and hope for a lighter sentence, or you can plead not guilty, and hope for a miracle. I would recommend pleading guilty, and hoping for a lighter sentence."',
                 choices: {
                     "Plead guilty": "guilt",
@@ -713,18 +738,21 @@
                 }
             },
             nonguilt: {
+                audio: "audio/fail.wav",
                 text: '"I\'ll plead not guilty." The lawyer shakes his head. "Ok..." He says. "I\'ll see what I can do." He walks out of the room. As you walked around the cell, you wonder what would happen. Supposedly there used to be laws about criminals in courts, but you doubted you would be given such luxuries. Hours passed, and the door opened again. The lawyer walked in, looked at you, the said, "You\'ve been sentanced to 50 years of jail time, with no possibility of parole." He turned around, and walked out of the room.',
                 choices: {
                     "50 years is a long time...": "end",
                 }
             },
             end: {
+                audio: "audio/mission.wav",
                 text: 'The lawyer leaves the room, and the door shuts. You sit there, stunned. 50 years? No chance of parole? What could I do...? Nothing. You couldn\'t do anything. This was the end.',
                 choices: {
                     "Start over": "start",
                 }
             },
             guilt: {
+                audio: "audio/mission.wav",
                 text: '"I\'d like to plead guilty, and I want a plea deal." The lawyer nodded. "I think that is your best choice." He walks out of the room. After the door closed, You passed, unable to sit still. Hours passsed, and finally the door opens. You look up, expecting to see the lawyer. To your suprise, you see someone else walk in, someone wearing a Nine Ten Do! uniform. "Hello." He says, and sits down. "I am here to offer you a deal."',
                 choices: {
                     "No thanks": "non",
@@ -732,12 +760,14 @@
                 }
             },
             non: {
+                audio: "audio/mission.wav",
                 text: 'The man looked suprised at your response. "Aren\'t you interested in the deal?" You shake your head, and the man sits there. Clearly he wasn\'t expecting that. "Well then I hope you enjoy your time in prison." The man left. A few hours later, the lawyer came back, and told you that you had been sentanced to 50 years in prison, with no chance of parole. Your life was effectivly over, if you survived the brutal prison system.',
                 choices: {
                     "50 years!?": "end",
                 }
             },
             deal: {
+                audio: "audio/mission.wav",
                 text: '"What is this deal?" You ask suspiciously. "The kind you can\'t refuse." Tha man said, a slight smile on his face. "We will tell the courts that you were working within our system in order to test our defences, and that the security alert sent out to the police was a false signal." Your mouth drops open as the man spoke. "What..." You clear your throat before continuing. "What do you want in exchange?" The man\'s smirk grows into a predatiry grin. "We want your help... testing... the defences of our rivals." The man leans closer, and drops his voice so low you can barely hear him. "If you know what I mean. We will protect you, mostly..." His voice trailed off and he leaned back. "So. What do you say?"',
                 choices: {
                     "Sure": "devil",
@@ -745,13 +775,15 @@
                 }
             },
             devil: {
+                audio: "audio/mission.wav",
                 Image: "pics/corrupt.png",
-                text: 'The man look happy at your response, clearly he had wanted that answer. "Excellent. Your lawyer will return shortly, and tell you that a miracle has occured, and you\'ve been found not guilty. After being given your items, you will leave the jail. A car will be waiting for you to take you to your new apartment. Someone will be there to instruct you further." As suddenly as the man arrived, he left, no pausing to answer and of your half-formed questions.',
+                text: 'The man look happy at your response, clearly he had wanted that answer. "Excellent. Your lawyer will return shortly, and tell you that a miracle has occured, and you\'ve been found not guilty. After being given your items, you will leave the jail. A car will be waiting for you to take you to your new apartment. Someone will be there to instruct you further." As suddenly as the man arrived, he left, not pausing to answer any of my half-formed questions.',
                 choices: {
                     "Wait and see": "freedo",
                 }
             },
             freedo: {
+                audio: "audio/theme.wav",
                 Image: "pics/car.jpg",
                 text: 'The events unfolded just as the man said the would. As you leave the jail, you see the car the man talked about. What do you do?',
                 audio: "audio/door.mp3",
