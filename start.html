@@ -810,12 +810,41 @@
             },
             black2: {
                 audio: 'audio/theme.wav',
-                text: 'You wait for a few hours, and then you get a response. It\'s from the CEO of Nine Ten Do!. The email is very carefully worded, and states they agree to your terms. You\'re records have aready been expunged, and you\'ll get half your money now, and half when you turn over the information. You shake your head. They must think you are an idiot. You send them an email with updated terms. 50% now, and the 50% when you give them access to the online folder. The wait this time was much less, and they agreed to your terms. You poen your bank account, find the agreed 50%, and send them the file location. You wait for a few minutes, and then the money arrives. You quickly transfer the money to a new account, and then delete the old one. You\'re rich! You\'re free! You\'re... bored. You\'ve got all the money you could ever want, but you\'ve got nothing to do. even if Nine Ten Do! does come after you, you can get away. I guess... It\'s over?',
+                text: 'You wait for a few hours, and then you get a response. It\'s from the CEO of Nine Ten Do!. The email is very carefully worded, and states they agree to your terms. You\'re records have aready been expunged, and you\'ll get half your money now, and half when you turn over the information. You shake your head. They must think you are an idiot. You send them an email with updated terms. 50% now, and the 50% when you give them access to the online folder. The wait this time was much less, and they agreed to your terms. You poen your bank account, find the agreed 50%, and send them the file location. You wait for a few minutes, and then the money arrives. You quickly transfer the money to a new account, and then delete the old one. You\'re rich! You\'re free! You\'re... bored. You\'ve got all the money you could ever want, but you\'ve got nothing to do. even if Nine Ten Do! does come after you, you can get away. I guess... It\'s over? Except now Nine Ten Do! is going to rule the world... congrats?',
                 choices: {
-                    "You Win! Start again?": "start",
+                    "You Win? Start again?": "start",
                 }
             },
-            
+            prevent: {
+                audio: 'audio/back.wav',
+                text: 'Now that you are in their systems it should be pretty simple to stop them from executing their plan. You start by mixing up the information in their sysetm. You alter it so slightly that nobody would notice unless they had the system memorized. After making it so the file with the virus was completley impossible to access, you make a few other changes, making their system run slower, and more difficult to navigate. Finally you finish off by adding a few lines of code that would make the system send out a false alarm to the police if anyone tried to access the virus file. You sit back, satisfied with you\'re work. It should be amost impossible for Nine Ten Do! to do anything wrong. Now what?',
+                choices: {
+                    "Back to the job hunt I guess": "prevent2",
+                }
+            },
+            prevent2: {
+                audio: 'audio/back.mp3',
+                text: 'You spend the next couple days walking around the city, looking for jobs, to no avail. One day, however, you get an email from Nine Ten Do! and your heart skips a beat. You open the email to discover that you\'ve won the competition! You had completley forgotten about it! You had a couple choices now, which would you choose?',
+                choices: {
+                    "Spend the money before it vanishes": "spree",
+                    "Treat it like a suprise, and hoard it": "hoard",
+                }
+            },
+            dead: {
+                audio: 'audio/chase.wav',
+                text: 'As you sprint down the alley, the steps behind you get louder and louder. You dodge to the left, down what appears to almost a crack in the wall, and you hear a grunt as one of the men chasing you crashes into the wall. "Stop or we wil shoot!" You hear from behind you.',
+                choices: {
+                    "Keep running": "dead2",
+                    "Stop and give in": "stop",
+                }
+            },
+            dead2: {
+                audio: 'audio/chase.wav',
+                text: 'You keep running. No way are they actually going to shoot, right? a dozen steps later, and you stumble forward. Someone had just pushed you. Your eyes grew heavy, and you start to feel tired. Weird. You think as you keep pushing. Why were you so tired all of a sudden? Pain erupts from your chest as you look down to see blood drbbiling from two gunshot wounds. You stop running, mouth open in shock. They had shot you! And the bullets had gone all the way through! You fall to the ground, eyes closing. The last thing you feel is the unforgiving ground.',
+                choices: {
+                    "You died": "start",
+                }
+            },
         };
 
 
