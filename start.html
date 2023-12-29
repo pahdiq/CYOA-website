@@ -666,7 +666,7 @@
             },
             files: {
                 audio: "audio/theme.wav",
-                text: 'You head back to your apartment, and start looking into what you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including kill anyone who got in their way! You need to stop this!',
+                text: 'You head back to your apartment, and start looking into what you took from the system. The files you stole were indeed about a virus, but it was much worse than you expected. This virus was being developed by the IPCG, and it was designed to take over the world! It would start by infecting every computer, and then spread to their brains through the cybernetics. Once everyone was infected, the IPCG could do anything they wanted, including killing anyone who got in their way! You need to stop this!',
                 choices: {
                     "Call the police": "corrupt",
                     "Look into the details": "doctor",
@@ -843,6 +843,38 @@
                 text: 'You keep running. No way are they actually going to shoot, right? a dozen steps later, and you stumble forward. Someone had just pushed you. Your eyes grew heavy, and you start to feel tired. Weird. You think as you keep pushing. Why were you so tired all of a sudden? Pain erupts from your chest as you look down to see blood drbbiling from two gunshot wounds. You stop running, mouth open in shock. They had shot you! And the bullets had gone all the way through! You fall to the ground, eyes closing. The last thing you feel is the unforgiving ground.',
                 choices: {
                     "You died": "start",
+                }
+            },
+           cops: {
+                audio: 'audio/danger.wav',
+                Image: "pics/station.jpg",
+                text: 'You assemble the information you have gathered, and encrypt it on your phone. This is too important to be done over the phone. You exit your apartment, every creak in the floor boards making you jump. You arrive at the polics station, feeling exausted by the terror you have felt. This whole conspiracy thing was too much. You walk up to the front desk, and ask to speak to the police chief. The receptionist looks at you, and asks "What is the nature of your emergancy?"',
+                choices: {
+                    "Demand to speak to the chief himself": "chief",
+                    "Tell the receptionist": "reception",
+                }
+            },
+            chief: {
+                audio: 'audio/danger.wav',
+                text: 'You look at the receptionist, and say "I need to speak to the chief himself." The receptionist looks at you, and says "I\'m sorry, but the chief is busy. I can take your report, and he will look at it later." You shake your head. "No. I need to speak to him now." The receptionist looks at you, and says "I\'m sorry, but you can\'t. Now please, tell me what is going on."',
+                choices: {
+                    "Tell the receptionist": "reception",
+                    "Demand more urgently": "chief2",
+                }
+            },
+            doctor: {
+                audio: 'audio/back.wav',
+                text: 'You dig into the files furthur, examining every piece of documentation you can find. Hidden deep inside the files was a single paper, written by a Doctor Basirus. It was an analysis on the virus\' fatality rate. "After a thorough examination of the virus, as well as no less than 150 simulations, I have come to the conclusion that this virus has a 100% infection rate, with a fatality rate in the high 80\'s. I estimate death rates of at least 8.9 Billion people, with less that 1% remaining uninfected." You stare at those last words, mouth open in horror. You had to stop this, didn\'t you?',
+                choices: {
+                    "Go into hiding, this is too big": "coward",
+                    "I will stop them": "choices",
+                }
+            },
+            coward: {
+                audio: 'audio/test.mp3',
+                text: 'No, this has already gone too far. Who were you to go up against the entire government? Sure it didn\'t make sense they wanted to kill everyone, as they already ruled the world, but here was the evidence. You had no chance. It was time to get out while you could. There wass no chance of developing a cure, but maybe you could escape. This diease would spread via electronics, as well as people. Your only hope was to run. Isolate yourself from everyone and everything. You pack your bags, do one last look through your apartment, grabbing a spare sock that had fallen beneath your bed, then took off. Minutes later you were on a bullet bus, headed for the dedicated farm lands. It was populated soley by robots, but maybe you could hide out there. Normally the only people to visit the robot towns were dedicated technicians, who always returned by nightfall. You had no idea how long you would be able to survive, but it was better than nothing.',
+                choices: {
+                    "Ride till the end of the line": "ride",
                 }
             },
         };
