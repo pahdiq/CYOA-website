@@ -115,7 +115,7 @@
         const storyNodes = {
             start: {
                 audio: 'audio/start.mp3',
-                text: 'You find yourself in the heart of Neon City, a sprawling metropolis of towering skyscrapers and flickering holographic billboards. The air is thick with the scent of synthetic fuel. You\'ve been trying to find a job for weeks, but no one seems to be hiring. As you navigate the crowded streets, you come across a mysterious alley. A figure in a trench coat approaches you. "Hey, you Alex Mercer?" the stranger asks.',
+                text: 'You find yourself in the heart of Neon City, a sprawling metropolis of towering skyscrapers and flickering holographic billboards. The air is thick with the scent of synthetic fuel. You\'ve been trying to find a job for weeks, but no one seems to be hiring. As you navigate the crowded streets, the rain nothing more than a distraction, you come across a dark alley. A figure in a trench coat approaches you, stepping partially into the light, though his face is cloaked in shadow. "Hey, you Alex Mercer?" the stranger asks.',
                 choices: {
                     Yes: "jobOffer",
                     Nope: "walkAway"
@@ -127,7 +127,7 @@
                 text: 'You nod, and move closer to the man. He\'s wearing a long coat, with the collar turned up to block the view of his face. His voice is gruff as he speaks. "I\'ve got a job for you. Are you in? I\'ll make it worth your while..."',
                 choices: {
                     "Give me more details": "acceptJob",
-                    no: "declineJob"
+                    No: "declineJob"
                 }
             },
             walkAway: {
@@ -163,7 +163,7 @@
             },
             hack: {
                 audio: 'audio/rain.mp3',
-                text: 'You nod again, and the man returns the gesture. "Good. Meet me in two days at this location." He hands you a piece of paper of all things, with an address on it. He looks around as he walks away, making sure that your discussion wasn\'t seen. You look at the adress, memorize it quickly, then tear the paper up. Well. now you have a job, don\'t know how legal it is, but oh well. You head home to prepare for the job.',
+                text: 'You nod again, and the man returns the gesture. "Good. Meet me in two days at this location." He hands you a piece of paper of all things, with an address on it. He looks around as he walks away, making sure that your discussion wasn\'t seen. You look at the adress, memorize it quickly, then tear the paper up. How odd paper is, it did make for a disposable form of untraceble communication, but it felt so weird. At least now you have a job, don\'t know how legal it is, but oh well. You head home to prepare for the job.',
                 choices: {
                     "Go Home": "goHome"
                 }
@@ -179,7 +179,7 @@
             },
             goHome: {
                 audio: 'audio/back.wav',
-                text: 'You get home and start studying. The databases the man wants you to hack should have almost no security, as the government is nothing more than a pawn for the businesses that really run the world. So it doesn\'t take you long to feel prepared.',
+                text: 'You get home and start studying. The databases the man wants you to hack should have almost no security, as the government is nothing more than a pawn for the businesses that really run the world. After a few practice runs on your own data, and even one trial run on your neighbor, you feel prepared.',
                 choices: {
                     "Meet the man": "Meeting",
                 }
@@ -888,10 +888,10 @@
             jail0: {
                 Image: "pics/interror.png",
                 audio: 'audio/theme.wav',
-                text: 'After a short walk, you arrive at the police station. The two officers escort you in, and then to a private interogation room. There they sit you down and leave the room, not even bothering to take your information. You sit there for what feels like hours, no sound, no interaction, just you and the room you were in. Finally a woman comes in, wearing a police uniform. She sits down, and looks at you. "Hello." She says, her voice soft. "I have few questions."',
+                text: 'After a short walk, you arrive at the police station. The two officers escort you in, and then to a private interogation room. There they sit you down and leave the room, not even bothering to take your information. You sit there for what feels like hours, no sound, no interaction, just you and the room you were in. Finally a woman comes in, wearing a police uniform. She sits down, and looks at you. "Hello." She says, her voice soft. "I have few questions, but I\'ll let you start/ tell me what happened, and what you know."',
                 choices: {
-                    "King Rhoam": "q4",
-                    "King Rhodes": "fail",
+                    "Tell her everything": "truth",
+                    "Tell her the minimum": "lies",
                 }
             },
         };
