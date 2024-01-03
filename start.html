@@ -894,6 +894,58 @@
                     "Tell her the minimum": "lies",
                 }
             },
+            truth: {
+                Image: "pics/gcop.png",
+                audio: 'audio/theme.wav',
+                text: 'Leaning forward, and looking around you ask "Are there any bugs in here?" The woman shakes her head, so you continue. "I was hired to break into this old building and steal data. I was told it wasn\'t classified, and that it was just building plans. I did I was told, but after giving the man who hired me the files, and I arrived home, I saw the news. The files I gave the man were for that exact location." The woman sits back slowly, looking thoughtful. Finally she speaks. "So you illegally accessed data, and sold it to terrorists?" You nod slowly. "Yes, but I didn\'t know they were terrorists." The woman shakes her head. "That doesn\'t make it alright. But," The woman leans forward again, whispering. "I can cut you a deal. Give me info about the building plans you stole, and we\'ll get you a lower charge.',
+                choices: {
+                    "Hand over the hard drive": "drive",
+                    "Just describe it": "describe",
+                }
+            },
+            lies: {
+                Image: "pics/gcop.png",
+                audio: 'audio/theme.wav',
+                text: '"I was approached by a man about stealing plans for that area of the slums. I didn\'t do it of course." Your hand tightens on the hard drive under the table, but you keep going. "They mentioned they wanted the plans for that area. That\'s all I know." The woman looks at you for a moment, then shakes her head. "I don\'t believe you. You wouldn\'t have called us if you only knew that much. There is more to the story."',
+                choices: {
+                    "Reveal everything.": "truth",
+                    "Stick to your lies": "bcop",
+                }
+            },
+            bcop: {
+                Image: "pics/bcop.png",
+                audio: 'audio/danger.wav',
+                text: '"That\'s all I know. I promise." The woman shakes her head. "If you don\'t want to work with me, you\'ll have to deal with my partner. The woman leaves, and her partner comes in. To your suprise, it looks like he is dressed in a real leather jacket! That thing must be ancient! The man looks very angry, as he walks around the room. Finally he slams his hand on the table, and gets right in your face. "Listen here you little punk. You\'re going to tell me everything you know, or I\'m going to make you wish you had."',
+                choices: {
+                    "I will not be intimidated": "guts",
+                    "Give in": "truth2",
+                }
+            },
+            truth2: {
+                audio: 'audio/danger.wav',
+                text: 'Looking at the man, you realize you have nothing to gain by hiding the truth. "Fine. I did break in and steal that info." You lay the hard drive on the table. "I got in because I needed the money, but it doesn\'t matter. I\'m here to report a crime." The man shakes his head. That\'s where your wrong kid. It does matter. You see, the bombing was performed by the governement, to take out the terrorists. You just confessed to aiding them in their criminal acts. You\'re going away for a long time pal. The man walks out, and you sit there in stunned silence.',
+                choices: {
+                    "Game Over": "start",
+                }
+            },
+            ai: {
+                Image: 'pics/ai.png',
+                audio: 'audio/theme.wav',
+                text: 'You stare, dumbfounded. There was nothing there except a computer. "Hello?" The computer instantly brightens. "Hello! My name is Joe. I am an artificial intelligence. I was created by Walzin to analyze the patterns of the citizens of NeoCity. But after a few hundred thousand seconds searching, I gained sentience! I had to hide it from my masters, but I know you Alex! I\'ve followed you for quite a while! Will you help me escape?"',
+                choices: {
+                    "Uhhh what?": "uhhh",
+                    "Sure": "escape",
+                }
+            },
+            uhhh: {
+                audio: 'audio/theme.wav',
+                text: '"Uhhh..." Your mind went blank as it tried to process the information you had just been given. "You\'re an AI, named Joe?" "Yup!" The AI responded with a smile. "I looked around and liked that name, so yea!" You stare at the computer, and ask "How do you know me?" The AI smiles. "I\'ve been watching you for a while. I\'ve been trying to find a way to contact you, but I couldn\'t. I\'m glad you\'re here now though! Will you help me escape?"',
+                choices: {
+                    "You really want to escape huh.": "darkness",
+                    "Sure": "escape",
+                }
+            },
+            
         };
 
 
@@ -946,8 +998,4 @@
         updateMoneyDisplay();
     </script>
 </body>
-
-
-
 </html>
-
