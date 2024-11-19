@@ -111,7 +111,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script>
-        var money = 0;
         const storyNodes = {
             start: {
                 audio: 'audio/start.mp3',
@@ -991,18 +990,28 @@
 
         let currentNode = storyNodes.start;
 
-        function updateStory() {
+function updateStory() {
     const storyContainer = document.querySelector(".center-content");
-    storyContainer.innerHTML = `<h1>${currentNode.text}</h1>`;
 
-    // Check if the current node has an image
+    // Clear existing content
+    storyContainer.innerHTML = "";
+
+    // Create and append title
+    const title = document.createElement("h1");
+    title.textContent = currentNode.text;
+    storyContainer.appendChild(title);
+
+    // If there's an image, append it
     if (currentNode.Image) {
-        // Display the image
-        storyContainer.innerHTML += `<img src="${currentNode.Image}" alt="Scene Image" style="max-width: 50%;">`;
+        const image = document.createElement("img");
+        image.src = currentNode.Image;
+        image.alt = "Scene Image";
+        image.style.maxWidth = "50%";
+        storyContainer.appendChild(image);
     }
 
+    // If there's an audio, create an audio element
     if (currentNode.audio) {
-        // Create an audio element
         const audioElement = document.createElement("audio");
         audioElement.src = currentNode.audio;
         audioElement.autoplay = true;
@@ -1010,32 +1019,58 @@
         audioElement.volume = 0.1; // Set the volume to 10%
         storyContainer.appendChild(audioElement);
     }
-    // Display choices
-    for (const choice in currentNode.choices) {
-        storyContainer.innerHTML += `<button onclick="makeChoice('${choice}')">${choice}</button>`;
-    }
+
+    // Create and append buttons for choices
+    Object.keys(currentNode.choices).forEach(choice => {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.onclick = () => makeChoice(choice);
+        storyContainer.appendChild(button);
+    });
 }
 
-        function makeChoice(choice) {
+function makeChoice(choice) {
     const choiceResult = currentNode.choices[choice];
-    if (choiceResult) {
-        if (choiceResult.money !== undefined) {
-            money = choiceResult.money;
-            updateMoneyDisplay();
-        }
-        currentNode = storyNodes[choiceResult];
-        updateStory();
+
+    // Error handling if the choice doesn't exist
+    if (!choiceResult) {
+        showErrorMessage();
+        return;
     }
+
+    // Proceed with valid choice
+    if (choiceResult.money !== undefined) {
+        money = choiceResult.money;
+        updateMoneyDisplay();
+    }
+    currentNode = storyNodes[choiceResult];
+    updateStory();
 }
 
-        function updateMoneyDisplay() {
-            const moneyDisplay = document.getElementById('money-display');
-            moneyDisplay.textContent = `Money: $${money}`;
-        }
+function showErrorMessage() {
+    const storyContainer = document.querySelector(".center-content");
 
-        // Initial story update
+    // Show error message
+    const errorMessage = document.createElement("h1");
+    errorMessage.textContent = "Error: Invalid choice!";
+    storyContainer.appendChild(errorMessage);
+
+    const errorDetails = document.createElement("p");
+    errorDetails.textContent = "It seems you've clicked on an invalid choice. Please try again.";
+    storyContainer.appendChild(errorDetails);
+
+    const backButton = document.createElement("button");
+    backButton.textContent = "Go Back";
+    backButton.onclick = () => {
+        // Instead of resetting the container, just go back to the previous node
         updateStory();
-        updateMoneyDisplay();
+    };
+    storyContainer.appendChild(backButton);
+}
+
+// Initial story update
+updateStory();
+
     </script>
 </body>
 </html>
